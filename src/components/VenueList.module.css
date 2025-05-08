@@ -1,0 +1,50 @@
+.venueList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.venueItem {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease; /* Smooth background transition */
+}
+
+.venueItem > span {
+  flex-grow: 1;
+}
+
+.venueTags {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.venueTags span {
+  background-color: #e0e0ff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+.selectVenue {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #ccc; /* Default: unshaded */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+.selectVenue.selected {
+  color: red; /* Shaded: red */
+}
+
+/* Hover effect for better UX */
+.venueItem:hover {
+  background-color: #e8e8e8; /* Slightly darker gray on hover */
+}

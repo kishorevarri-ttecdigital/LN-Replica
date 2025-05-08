@@ -1,0 +1,38 @@
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc; /* Add a border to the bottom of the tabs container */
+}
+
+.tab {
+  padding: 10px 15px;
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove borders */
+  cursor: pointer;
+  color: #888; /* Lighter gray for unselected tabs */
+  position: relative; /* For positioning the red underline */
+  font-weight: bold;
+  outline: none; /* Remove outline */
+  font-size: 0.9em; /* Adjust font size as needed */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+.tab.active {
+  color: #000;
+}
+
+/* Add red underline for active tab */
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* Positioned at the bottom, accounting for the container border */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #E21836;
+}
+
+/* Hover effect for better UX */
+.tab:hover:not(.active) {
+  color: grey; /* Slightly darker gray on hover */
+}

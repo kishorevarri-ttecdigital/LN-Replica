@@ -1,0 +1,53 @@
+.chatAreaContainer {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  flex-grow: 1; /* Allow it to grow and take available space */
+  justify-content: center; /* Centers horizontally */
+
+
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center; /* This is key for inline alignment */
+  margin-bottom: 10px; /* Space below the header */
+}
+.branding {
+  /* width: 144px;  */
+  /* height: 35px; */
+  width: 206px; /* Adjust as needed */
+  height: 50px;
+  margin-right: 10px;
+  align-self: flex-start; /* Align to the start (left) */
+  margin-bottom: 10px;
+}
+
+/* .chatArea{
+  display: flex;
+  justify-content: center;
+
+} */
+
+.stats {
+  background-color: #E21836;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: 1rem;
+  color: white;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spanInt{
+  margin-left: 1em; /* Increased margin for wider gap */
+}

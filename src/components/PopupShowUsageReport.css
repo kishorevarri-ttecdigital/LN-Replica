@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family:  Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family:  Helvetica, Arial, sans-serif;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
+    min-width: 350px;
+    /* Prevent excessive width on large screens */
+    max-width: 400px; 
+  }
+  
+  .popup-content h2 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+  }
+
+  .popup-content p {
+    margin-top: 30px; /* Remove default top margin */
+    margin-bottom: 10px;
+    text-align: center; /* Center the title */
+  }
+  
+  /* Button container */
+  .popup-datepicker {
+    display: flex; /* Arrange buttons horizontally */
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 30px; /* Space between buttons */
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .popup-datepicker input {
+    width: 150px;
+  }
+
+  .popup-content ul.session-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 15px 0;
+  }
+  
+  .popup-content li.session-item {
+    display: flex;
+    align-items: center; /* Vertically center items in the flex container */
+    justify-content: space-between; /* Push label and radio apart */
+    margin-bottom: 10px; /* Space between items */
+    padding-left: 20px; /* Create space for the custom marker */
+    position: relative; /* Needed for absolute positioning of ::before */
+  }
+  
+  /* Custom list marker */
+  .popup-content li.session-item::before {
+    content: '•'; /* Bullet character */
+    position: absolute;
+    left: 5px; /* Position marker to the left */
+    top: 50%; /* Start positioning from the middle */
+    transform: translateY(-50%); /* Precisely center vertically */
+    font-size: 1.2em; /* Adjust marker size if needed */
+    color: #333; /* Marker color */
+  }
+  
+  
+  .popup-content label.session-label {
+    margin-right: 10px;
+    cursor: pointer;
+    /* Allow label to grow if needed, but not excessively */
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0; 
+    white-space: nowrap; 
+    /* overflow: hidden;  */
+    text-overflow: ellipsis; 
+    /* max-width: calc(100% - 40px); */
+    max-width: 50px;
+  }
+  
+  .popup-content input.session-radio {
+    margin-left: 100px; /* Keep radio on the right */
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent radio from shrinking */
+    width: 10px;
+  }
+  
+  /* Button container */
+  .popup-buttons {
+    display: flex; /* Arrange buttons horizontally */
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 30px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+    justify-content: center; 
+  }
+  
+  /* General button styling */
+  .popup-content button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    text-align: center; /* Center the text within the button */
+    flex-basis: 0; /* Ensure flex-grow works correctly */
+    /* Limit maximum width */
+    max-width: 150px; 
+    flex-grow: 1; /* Prevent buttons from growing beyond their content/max-width */
+    min-width: 100px;
+   
+  }
+  
+  .popup-content button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Specific styling for cancel button (optional) */
+  .popup-buttons button:last-child {
+    background-color: #eee;
+    text-align: center;
+  }
+  .popup-buttons button:last-child:hover {
+    background-color: #ddd;
+  }
+  
+.cancel-btn-container{
+  display: flex;
+  justify-content: right;
+  padding: 0;
+  height: fit-content;
+}
+
+.cancel-btn-container button{
+  justify-content: right;
+  padding: 0;
+  height: 10px;
+  min-height: 10px;
+}
+
+#cancel-btn2{
+  background: transparent;
+  border: none;
+  height: 10px;
+  margin: 0;
+  justify-content: right;
+  padding: 0;
+}
+
+#cancel-btn2 img{
+  margin: 0;
+}
+

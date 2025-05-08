@@ -1,0 +1,60 @@
+.tabsContainer {
+  width: 100%;
+  /* border: 1px solid #eee; */
+  /* border-radius: 5px; */
+  /* overflow: hidden; */
+}
+
+.tabHeader {
+  display: flex;
+  /* background-color: #f1f1f1; */ /* Remove background from header */
+  border-bottom: 1px solid #ccc;
+}
+
+.tabButton {
+  background-color: #f1f1f1; /* Move background to buttons */
+  border: 1px solid #ccc; /* Add border for inactive tabs */
+  border-bottom: none; /* Remove bottom border initially */
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 1rem;
+  /* border-right: 1px solid #ccc; */ /* Separator handled by individual borders */
+  margin-right: 2px; /* Space between tabs */
+  margin-bottom: -1px; /* Overlap the container's bottom border */
+
+  /* Add rounded corners to the top */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tabButton:last-child {
+  margin-right: 0; /* No margin for the last tab */
+}
+
+.tabButton:hover {
+  background-color: #e0e0e0; /* Slightly darker hover */
+}
+
+.tabButton.active {
+  background-color: #fff; /* Make active tab background match content area */
+  font-weight: bold;
+  border-color: #ccc;
+  border-bottom-color: #fff; /* Hide bottom border for active tab by matching content bg */
+  z-index: 1; /* Ensure active tab border overlaps others */
+}
+
+.tabContent {
+  padding: 20px;
+  border: 1px solid #ccc; /* Add border around content */
+  border-top: none; /* Remove top border as tabs handle it */
+  background-color: #fff; /* Ensure content area has white background */
+  /* Optional: Add rounding to bottom corners to match */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  clear: both; /* Ensure content clears floated elements if any */
+  margin-top: 0; /* Align with tab bottom border */
+  position: relative; /* Needed for z-index context */
+  z-index: 0;
+}

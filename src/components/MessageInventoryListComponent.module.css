@@ -1,0 +1,91 @@
+.venueList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.venueItem {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  justify-content: space-between; /* Push name/tags to left, button to right */
+  align-items: center; /* Align items to the start (left) */
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+.venueNameAndTags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.venueTags {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  gap: 5px; /* Space between tags */
+  margin-top: 5px; /* Space between venue name and tags */
+}
+
+.venueTags span {
+  background-color: #e0e0ff;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+/* Add this rule to apply colors dynamically */
+.venueTags span[data-tag-index="0"] { background-color: lightblue; }
+.venueTags span[data-tag-index="1"] { background-color: #e0e0ff }
+.venueTags span[data-tag-index="2"] { background-color: rgb(179, 252, 179); }
+.venueTags span[data-tag-index="3"] { background-color: rgb(233, 219, 160); }
+.venueTags span[data-tag-index="4"] { background-color: rgb(199, 233, 231); }
+/* Add more as needed, or use a CSS-in-JS solution for a more dynamic approach */
+
+.selectVenue {
+  /* margin-left: auto; Push the button to the right */
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #ccc; /* Default: unshaded */
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+.selectVenue.selected {
+  color: red; /* Shaded: red */
+}
+
+/* Hover effect for better UX */
+.venueItem:hover {
+  background-color: #e8e8e8; /* Slightly darker gray on hover */
+  }
+.actionButtonsContainer{
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  margin-top: 10px;
+}
+
+.actionButtonsButton {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px; /* Add some vertical spacing between buttons */
+  border-radius: 12px;
+  cursor: pointer;
+  max-width: fit-content;
+  }
+
+.actionButtonsButton:hover {
+  background-color: grey;
+  }
+  
+  #selectionNotice {
+    color: rgb(245, 3, 3);
+    font-size: 14px;
+    margin: 20px;
+  }

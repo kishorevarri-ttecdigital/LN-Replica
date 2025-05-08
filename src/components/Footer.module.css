@@ -1,0 +1,156 @@
+.footer {
+  display: flex; 
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  /* border-top: 1px solid #ccc; */
+  margin-top: auto; /* Push the footer to the bottom */
+  min-height: 50px;
+  background: white;
+
+}
+
+.footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  /* Use inline-flex to align text and image inside the button */
+  display: inline-flex;
+  align-items: center; /* Vertically center content (text and image) */
+  justify-content: center; /* Horizontally center content */
+  gap: 5px; /* Add space between text and image */
+  margin-right: 10px; /* Add some space between buttons */
+  height: 42px;
+}
+
+/* Remove right margin from the last button */
+.footer > button:last-of-type {
+  margin-right: 0;
+}
+
+
+.footer button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer img{
+  height: 25px;
+}
+/* img {
+  height: 20px;
+} */
+
+h2{
+  margin-top: 0px;
+}
+.optionsMenu {
+  position: absolute;
+  /* bottom: 50px; /* Adjust as needed */
+  /* right: 10px;  */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+   /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 1px 1px 10px 5px rgba(138, 138, 138, 0.5);   
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); */
+  z-index: 1000;
+  width: 250px;
+}
+
+.optionsMenu img {
+  height: 20px;
+  margin-right: 10px;
+}
+.optionsMenu button {
+  display: inline-flex;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* Reset flex properties inherited from .footer button */
+  /* display: block; */
+  align-items: center;
+  justify-content: left;
+  gap: initial;
+  margin-right: 0; /* Reset margin */
+}
+
+.optionsMenu button:hover {
+  background-color: rgb(161, 161, 161);
+  color: white;
+}
+
+#logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  justify-content: left;
+}
+
+.popup {
+  position: absolute;
+  background-color: #f4f4f4;
+  color: white;
+  border: 1px solid black;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  /* Positioning at the top and left */
+  bottom: calc(100% + 300px); /* Position above the button */
+  right: calc(100% - 50%);
+  transform: translate(100%, 50%);
+  /* Remove top and left properties */
+  /* top: auto;  Initially place it below the button */
+  /* right: 0;  Align to the right edge of the button container */
+  /* width: max-content; */
+  width: fit-content; 
+  /*The preline attribute split white space to next line  */
+  white-space: pre-line; 
+  text-align: left;
+  /*Generally good practice with fit-content */
+  display: inline-block; 
+  min-width: 200px;
+  max-width: 200px;
+  word-wrap: break-word;
+  /* FOR SCROLLBAR*/
+  max-height: 15vh;
+  min-height: 10vh;
+  overflow-y: auto;
+  /* display: flex; */
+  justify-content: space-between;
+}
+
+.popup h3 {
+  margin-top: 0;
+  text-align: center;
+  color: black;
+}
+
+.popup button {
+  /* margin-right: 5px; REMOVE margin */
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: center; /* Center the button text */
+  border: 1px solid black;
+  margin: 10px 10px;
+  /* Reset flex properties */
+  display: inline-block; /* Or block depending on layout */
+  align-items: initial;
+  justify-content: initial;
+  gap: initial;
+  margin-right: 0; /* Reset margin */
+
+}

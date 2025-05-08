@@ -1,0 +1,30 @@
+General Body Styles
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(12, 12, 12);
+  padding: 0;
+
+}
+
+
+.app {
+  min-width: 500px;
+}
+
+.appView_sub{
+  max-width: 60%;
+  min-width: 60%;
+  justify-content: left;
+  background-color: #f2f2f2;
+
+
+}
+.appView{
+  justify-content: center;
+  display: flex;
+  background-color: #202124;
+  padding: 0;
+
+}
+
+

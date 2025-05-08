@@ -1,0 +1,124 @@
+/* Add this CSS to your MessageInsightsComponent.module.css file */
+
+.formattedTextContainer {
+  display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reactMarkdownContainer {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  justify-content: space-between; /* Push name/tags to left, button to right */
+  align-items: center; /* Align items to the start (left) */
+  border: 1px solid #ddd;
+  /* padding: 10px; */
+  border-radius: 12px;
+  transition: background-color 0.2s ease; /* Smooth background transition */
+}
+
+
+/* Ensure common block and inline elements within the container wrap */
+.reactMarkdownContainer p,
+.reactMarkdownContainer div,
+.reactMarkdownContainer span,
+.reactMarkdownContainer li {
+  word-wrap: break-word; /* Fallback */
+  overflow-wrap: break-word;
+  white-space: normal; /* Explicitly allow wrapping */
+  max-width: 100%; /* Prevent children from exceeding container width */
+}
+
+/* Special handling for preformatted text and code blocks */
+.reactMarkdownContainer pre,
+.reactMarkdownContainer code {
+  word-wrap: break-word; /* Fallback */
+  overflow-wrap: break-word; /* Allow breaking long words/strings */
+  white-space: pre-wrap; /* Preserve whitespace but allow wrapping */
+  max-width: 100%; /* Prevent exceeding container width */
+}
+
+.reactMarkdownContainer  > span {
+  flex-grow: 1;
+}
+
+.selectInsight {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #ccc; /* Default: unshaded */
+  transition: color 0.2s ease; /* Smooth color transition */
+
+}
+
+.selectInsight.selected {
+  color: red; /* Shaded: red */
+}
+
+.snippetButtonContainer {
+  margin-top: 5px; /* Add some spacing between the text and the button */
+  position: relative; 
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+
+}
+
+.snippetButton {
+  background-color:black; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 25px;
+  align-self: flex-end;
+}
+
+.popup {
+  position: absolute;
+  background-color: black;
+  color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 8px;
+  /* Positioning at the top and left */
+  bottom: calc(100% - 0px); /* Position above the button */
+  right: calc(100% - 300px);
+  transform: translate(100%, -10%);
+  /* Remove top and left properties */
+  /* top: auto;  Initially place it below the button */
+  /* right: 0;  Align to the right edge of the button container */
+  /* width: max-content; */
+  width: fit-content; 
+  /*The preline attribute split white space to next line  */
+  white-space: pre-line; 
+  text-align: left;
+  /*Generally good practice with fit-content */
+  display: inline-block; 
+  min-width: 500px;
+  max-width: 600px;
+  word-wrap: break-word;
+  /* FOR SCROLLBAR*/
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+.popup h3 {
+  margin-top: 0;
+}
+#docuSource{
+    /* font-size: 12px; */
+    text-align: left;
+}

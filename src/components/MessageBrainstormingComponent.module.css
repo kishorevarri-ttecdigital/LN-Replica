@@ -1,0 +1,51 @@
+/* Add this CSS to your MessageInsightsComponent.module.css file */
+
+.card {
+  position: relative; /* Make the container relative for absolute positioning of the button */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  border-radius: 12px;
+  background-color: #f2f2f2; /* Light gray background */
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+.reactMarkdownContainer {
+    position: relative;
+    padding-right: 30px; /* Add padding to the right to make space for the button */
+    /* display: inline-block; */
+    /* display: flex; */
+    width: 100%;
+    /* align-items: flex-start; */
+}
+
+.selectElement {
+  /* flex-shrink: 0; Prevent the button from shrinking */
+  position: absolute; /*Position the button absolutely within the container*/
+  top: 0px;
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 10;
+  color: #ccc; /* Default: unshaded */
+  transition: color 0.2s ease; /* Smooth color transition */
+
+}
+
+.selectElement.selected {
+  color: red; /* Shaded: red */
+}
+
+.plainText{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+
