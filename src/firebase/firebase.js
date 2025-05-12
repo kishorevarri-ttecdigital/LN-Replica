@@ -20,7 +20,8 @@ const firebaseConfig = {
     projectId: "insightsteamsandbox",
     storageBucket: "insightsteamsandbox.firebasestorage.app",
     messagingSenderId: "151472627439",
-    appId: "1:151472627439:web:6010e782dce935fbb4c51a"
+    appId: "1:151472627439:web:6010e782dce935fbb4c51a",
+    databaseURL: "https://insightsteamsandbox-default-rtdb.firebaseio.com/"
 };
 
 const app = initializeApp(firebaseConfig);
