@@ -2,7 +2,7 @@ export async function downloadSessionLogs(folderName) {
 
     try {
 
-        const response = await fetch(`https://ln-frontend-middleware-dev-1089873937305.us-central1.run.app/downloads/${folderName}`);
+        const response = await fetch(`https://ln-middleware-replica-151472627439.us-central1.run.app/downloads/${folderName}`);
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
