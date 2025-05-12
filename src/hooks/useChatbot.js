@@ -35,7 +35,7 @@ export const useChatbot = () => {
 
     try {
       // Send only the new message text
-      const response = await fetch('https://ln-middleware-replica-151472627439.us-central1.run.app', {      
+      const response = await fetch('https://ln-middleware-replica-151472627439.us-central1.run.app/api', {      
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
