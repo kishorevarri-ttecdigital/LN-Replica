@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className={styles.header}>
       <img src={logo} alt="Live Nation Logo" className={styles.logo} />
-      <h1>Media & Sponsorship AI Assistant</h1>      
+      <h1>RFP AI Assistant</h1>      
       <div className={styles.buttonsTopRight}>
       </div>
     </div>
